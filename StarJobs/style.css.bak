@@ -11,7 +11,7 @@
     --amarelo-rgb: 229 142 26;
     --amarelo-claro: #faa634;
     --amarelo-escuro: #c97e19;
-    --vermelho-vinho: #81182d;
+    --vermelho-vinho: #9B3535;
     --vermelho: #992525;
     --vermelho-rgb: 153 37 37;
     --vermelho-claro: #bd2b2b;
@@ -20,33 +20,12 @@
     --cinza-rgb: 195 197 199;
     --cinza-claro: #c3c5c7;
     --cinza-escuro: #999999;
-    --cinza-borda: #959596;
     
-}
-*{
-    box-sizing: border-box;
 }
 
 @font-face { 
     font-family: Love; 
-    src: url(Love.ttf);
-}
-
-@font-face {
-    font-family: Century-goth;
-    src: url(centurygothic.ttf);
-}
-
-
-body {
-	font-family: Century-goth;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-p{
-    word-wrap: break-word;
+    src: url(Love.ttf)
 }
 
 .letrakawai{
@@ -206,8 +185,7 @@ p{
 
 /* Botão Cinza */
 .botao-cinza {
-    border: 2px solid var(--cinza-borda);
-    border-style: groove;
+    border: 2px solid black;
     border-radius: 5px;
     text-decoration: none;
     color: black;
@@ -217,7 +195,7 @@ p{
 }
 
 .botao-cinza:hover {
-    border: 2px solid var(--cinza-borda);
+    border: 2px solid black;
     border-radius: 5px;
     text-decoration: none;
     color: black;
@@ -323,7 +301,10 @@ p{
 }
 
 /* Backgrounds */
-
+.background-azul {
+    background-color: var(--azul);
+    color: white;
+}
 
 .background-verde {
     background-color: var(--verde);
@@ -343,10 +324,6 @@ p{
 .background-vermelho {
     background-color: var(--vermelho-vinho);
     color: white;
-}
-
-.background-cinza {
-    background-color: var(--cinza-escuro);
 }
 
 /* Input Text */
@@ -400,177 +377,4 @@ p{
     border: #555555 solid 1px;
     width: 20px;
     font-weight: bold;
-}
-
-
-
-
-/* Logins e Cadastros */
-.loginEstudante {
-    height: 80%;
-    width: 30%;
-    background-color: #dddddd;
-    border-style: groove; 
-    border-radius: 15px;
-    border-color: #959596;
-    margin-left: 35%;
-}
-
-.loginEmpresa {
-    height: 70%;
-    width: 30%;
-    background-color: #dddddd;
-    border-style: groove; 
-    border-radius: 15px;
-    border-color: #959596;
-    margin-left: 35%;
-}
-
-.loginFatec{
-    height: 80%;
-    width: 30%;
-    margin-left: 35%;
-    border-style: groove; 
-    background-color: #dddddd; 
-    border-radius: 15px;
-    border-color: #959596;
-}
-
-.cadastroEstudante {
-    height: 85%;
-    width: 45%;
-    margin-left: 25%;
-    margin-bottom: 5%;
-    background-color: #dddddd;
-    border-style: groove; 
-    border-radius: 15px;
-    border-color: #959596;
-}
-
-.cadastroEmpresa {
-    margin-left: 35%;
-    height: 85%; 
-    width: 30%;
-    background-color: #dddddd;
-    border-style: groove; 
-    border-radius: 15px;
-    border-color: #959596;
-}
-
-.cadastroEmpresa2 {
-    margin-left: 20%; 
-    height: 80%; 
-    width: 60%;
-    background-color: #dddddd;
-    border-style: groove; 
-    border-radius: 15px;
-    border-color: #959596;
-}
-
-
-
-
-/* Centralizar e dar forma na página inicial */
-.fatec{
-    padding: 5% 25% 10%;
-    height: 300px;
-}
-
-
-.fatecFalas{
-    float: left; 
-}
-
-
-.imgLogoFatec{ 
-    float: right;
-    width: 200px; 
-    height: 200px;
-}
-
-/* Deixar responsivo */
-
-@media only screen and (max-width: 1000px) {
-    body{
-        margin: 0%;
-        font-size: small;
-        width: 100%;
-    }
-
-    /* Página inicial */
-    .fatec{
-        margin: 0% ;
-        height: 300px;
-        width: auto;
-        padding: 2% 10% 0%;
-    }
-
-    .fatecFalas{
-        float:bottom;
-        overflow-wrap: break-word;
-        margin: 0;
-    }
-
-    .imgLogoFatec{
-        float: left;
-        width: 150px;
-        height: 150px;
-    }
-    
-    /* Logins e Cadastros*/
-    
-    .loginEstudante {
-        font-size: small;
-        height: 70%;
-        width: 80%;
-        background-color: #dddddd;
-        border-style: groove; 
-        border-radius: 15px;
-        border-color: #959596;
-        margin-left: 10%;
-    }
-
-    .loginEmpresa {
-        font-size: small;
-        height: 70%;
-        width: 80%;
-        background-color: #dddddd;
-        border-style: groove; 
-        border-radius: 15px;
-        border-color: #959596;
-        margin-left: 10%;
-    }
-    
-    .loginFatec {
-        height: 70%;
-        width: 80%;
-        margin-left: 10%;
-        border-style: groove; 
-        background-color: #dddddd; 
-        border-radius: 15px;
-        border-color: #959596;
-    }
-
-    .cadastroEstudante {
-        height: 85%;
-        width: 90%;
-        margin-left: 5%;
-        margin-bottom: 5%;
-        background-color: #dddddd;
-        border-style: groove; 
-        border-radius: 15px;
-        border-color: #959596;
-    }
-
-    .cadastroEmpresa2 {
-        margin-left: 5%; 
-        height: 80%; 
-        width: 90%;
-        background-color: #dddddd;
-        border-style: groove; 
-        border-radius: 15px;
-        border-color: #959596;
-    }
-    
-
 }

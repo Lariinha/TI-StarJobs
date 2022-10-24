@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivagas - Estudante Aplicar Vaga</title>
+    <title>StarJobs - Estudante Aplicar Vaga</title>
 
     <link href="style.css" rel="stylesheet">
-
+    <link href="cadastroModal.css" rel="stylesheet">
 </head>
-<body style="margin: 0">
+
+<body style="margin: 0;">
     
     <script src="navbarEstu.js"></script>
 
-    <div class="background-azul" style="height: 100px;">
+    <div style="height: 100px;">
 
         <br>
         <br>
     
-        <a href="vagaDetalhes.html" class="botao-cinza" style="font-size: 1.5em; margin-left: 100px;">Voltar</a>
+        <a href="javascript:void(0)" onClick="history.go(-1); return false;" class="botao-cinza" style="font-size: 1.5em; margin-left: 100px;">Voltar</a>
 
     </div>
 
-    <div class="background-azul" style="height: 470px;">
+    <div style="height: 600px;">
     
-        <div style="height: 90%;width: 35%;margin: 0 0 0 32.5%;background-color: #dddddd;border-style: solid; border-radius: 15px;border-color: #000000;">
+        <div style="margin: 0 30% 5% 32.5%;background-color: #dddddd;border-style: solid; border-radius: 15px;border-color: #000000;">
         
             <h3 style="color: #000000; text-align: center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">PREENCHA ABAIXO PARA FAZER SE APLICAR A VAGA</h3>
 
@@ -40,8 +41,8 @@
             
             <br>
 
-            <input type="password" class="input-text" style="margin: 5px 0 0 3%;width: 40%;" >
-            <input type="password" class="input-text" style="margin: 5px 0 0 4%;width: 40%;">
+            <input type="password" class="input-text" style="margin: 5px 0 0 3%;width: 42%;" >
+            <input type="password" class="input-text" style="margin: 5px 0 0 4%;width: 42%;">
 
             <br>
             <br>
@@ -52,10 +53,11 @@
 
             <br>
             <br>
-            <br>
-            <br>
+        
 
-            <a href="#" class="botao-azul" style="font-size: 1.5em; margin: 0 35%">APLICAR</a>
+            <script src="aplicarVaga.js"></script>
+            
+            
 
         </div>
 

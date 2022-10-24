@@ -1,7 +1,7 @@
 document.write(`
-<div style="height: 110px; padding: 0 20%;">
+<div style="height: 110px; padding: 0 20%; background-color: #81182d;">
         <a href="empresaPerfil.html">
-            <img src="img/LogoTrivagas.png" alt="LogoTrivagas" height="100px" style="padding-top: 5px; float: left;">
+            <img src="logoStarJobs.png" alt="LogoTrivagas" height="150px" style="padding-top: 5px; float: left;">
         </a>
 
         <div style="float: right; height: 100%; padding: 40px 0;">
