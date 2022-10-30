@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Out-2022 às 04:58
+-- Tempo de geração: 29-Out-2022 às 23:39
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -92,6 +92,19 @@ INSERT INTO `vagas` (`ID_vaga`, `ID_empresa`, `Conteudo`) VALUES
 (2, 2, '<h2 class=\"texto-azul\">ESTAGIO EM T.I</h2>\r\n \r\n<p>Empresa: WLM Scania & Agro | Campinas SP \r\n <br>\r\n\r\nAtividades: \r\n<br>\r\nAuxiliar no atendimento remoto e presencial aos usuários do sistema da empresa. \r\n<br>\r\nDar suporte na formatação e manutenção dos computadores e notebooks. \r\n<br>\r\nAcompanhar controle de chamados abertos em sistema. \r\n<br>\r\nRealizar atendimento telefônico. \r\n<br>\r\n <br>\r\n<br>\r\nRequisitos: \r\n<br>\r\nGraduação em andamento em Rede de Computadores, Engenharia da Computação, Ciências da Computação e/ou áreas afins. \r\n<br>\r\nHabilidade com atendimento ao usuário (help desk). \r\n<br>\r\nConhecimento de Software e Hardware, manutenção de desktops e notebooks e noções de rede estruturada, será um diferencial. \r\n<br>\r\n\r\nVantagens/Benefícios: \r\n<br>\r\nVale transporte; \r\n<br>\r\nRefeição na empresa; \r\n<br>\r\nSeguro de Vida; \r\n<br>\r\nGympass; \r\n<br>\r\nUniforme; \r\n<br>\r\n<br>\r\nHorário de trabalho: \r\n<br>\r\nSegunda a sexta-feira, das 07h30 às 14h30. \r\n</p>\r\n \r\n\r\n '),
 (3, 3, '<h2 class=\"texto-azul\">ESTÁGIO EM GESTÃO INDUSTRIAL</h2>  \r\n<p>Empresa: HENKEL LTDA | Itapevi SP \r\n<br>\r\nDados da vaga: \r\n<br>\r\nSalário<br> \r\nR$ 1.700 por mês \r\n<br>\r\nTipo da vaga<br> \r\nEstágio / Trainee<br> \r\n\r\nDescrição completa da vaga: <br>\r\nR$ 1,700.00<br> \r\n\r\n<br><br>\r\n\r\nBenefícios \r\n<br>\r\nSeguro de Vida<br> \r\nAssistência Médica<br> \r\nAssistência Odontológica<br> \r\n13º Bolsa Auxílio <br>\r\nÔnibus fretado <br>\r\nRefeição no local <br>\r\nRecesso remunerado <br>\r\nEspaço para Refeição <br>\r\nCurso de Idiomas <br>\r\nCesta de Natal <br>\r\n \r\n<br>\r\nRequisitos <br>\r\n<br>\r\nADMINISTRAÇÃO <br>\r\nENGENHARIA BIOQUÍMICA<br> \r\nQUIMICA INDUSTRIAL <br>\r\nENGENHARIA DE PRODUCAO COM ENFASE EM QUIMICA <br>\r\nADMINISTRAÇÃO PUBLICA COM ENFASE EM MARKETING <br>\r\nENGENHARIA DE GESTÃO <br>\r\nENGENHARIA DE AUTOMACAO <br>\r\nADMINISTRAÇÃO DE EMPRESAS COM ÊNFASE EM COMÉRCIO INTERNACIONAL <br>\r\nENGENHARIA DE PRODUÇÃO QUIMICA <br>\r\nENGENHARIA DE SISTEMAS <br>\r\nENGENHARIA INDUSTRIAL <br>\r\n <br>\r\nConhecimentos obrigatórios <br>\r\n\r\nInglês (Intermediário) <br>\r\n\r\nConhecimentos valorizados <br>\r\n\r\nExcel <br>\r\n\r\nÁrea de atuação <br>\r\n\r\nINDUSTRIA QUIMICA <br>\r\n\r\nCarga horária semanal <br>\r\n<br>\r\n30 \r\n<br>\r\nDuração do programa <br>\r\n<br>\r\nAté 2 anos </p>');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `vagas_do_aluno`
+--
+
+CREATE TABLE `vagas_do_aluno` (
+  `ID_vaga` int(11) DEFAULT NULL,
+  `Id_aluno` int(11) DEFAULT NULL,
+  `path` varchar(100) NOT NULL,
+  `data` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -116,6 +129,13 @@ ALTER TABLE `vagas`
   ADD KEY `ID_empresa` (`ID_empresa`);
 
 --
+-- Índices para tabela `vagas_do_aluno`
+--
+ALTER TABLE `vagas_do_aluno`
+  ADD KEY `vagas_do_aluno_ibfk_1` (`ID_vaga`),
+  ADD KEY `vagas_do_aluno_ibfk_2` (`Id_aluno`);
+
+--
 -- Restrições para despejos de tabelas
 --
 
@@ -124,6 +144,13 @@ ALTER TABLE `vagas`
 --
 ALTER TABLE `vagas`
   ADD CONSTRAINT `vagas_ibfk_1` FOREIGN KEY (`ID_empresa`) REFERENCES `empresa` (`Id_empresa`);
+
+--
+-- Limitadores para a tabela `vagas_do_aluno`
+--
+ALTER TABLE `vagas_do_aluno`
+  ADD CONSTRAINT `vagas_do_aluno_ibfk_1` FOREIGN KEY (`ID_vaga`) REFERENCES `vagas` (`ID_vaga`),
+  ADD CONSTRAINT `vagas_do_aluno_ibfk_2` FOREIGN KEY (`Id_aluno`) REFERENCES `aluno` (`Id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
