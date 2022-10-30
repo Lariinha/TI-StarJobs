@@ -1,6 +1,7 @@
 document.write(`
 <div style="height: 110px; padding: 0 20%; background-color: #81182d;">
-        <a href="estudanteInicial.html">
+        <a href="estudanteInicial.php
+        ">
             <img src="logoStarJobs.png" alt="Logo Star Jobs" height="150px" style="padding-top: 5px; float: left;">
         </a>
 

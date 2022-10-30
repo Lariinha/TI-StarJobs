@@ -37,19 +37,28 @@
                 <?php
                 include 'conexao.php';
 
+                
+
                 $vaga = $_GET['vaga'];
+                $pesquisa ="SELECT ID_empresa from vagas where ID_vaga = '$vaga'";
+                $empresa =  mysqli_query($mysqli,$pesquisa);
+
 
                 $sql = "SELECT Conteudo from vagas where ID_vaga = '$vaga'"; 
                 $result = mysqli_query($mysqli,$sql);
+                
+                session_start();
+                $_SESSION['vaga']= $vaga;
+                $_SESSION['empresa']= $empresa;
 
                 while ($row = $result->fetch_assoc()) {
                 echo $row['Conteudo']."<br>";
                 }
-            
+               
 
                 ?>
                 
-                <a href="estudanteAplicarVaga.html" class="botao-amarelo" id="myBtn2" style="float: right; font-size: 1.5em;">Aplicar-se</a>
+                <a  href="estudanteAplicarVaga.php" class="botao-amarelo" id="myBtn2" style="float: right; font-size: 1.5em;">Aplicar-se</a>
             </div>
             
         </div>
@@ -57,13 +66,7 @@
     </div>
 
     <div style="height: 110px; padding: 0 20%;">
-        <!--Modal aplicar-se -->
-        <div id="myModalA" class="modalA">
-            <div class="modal-contentA" style="text-align:center; padding-top: 40px;padding-bottom: 40px;">
-                <span class="closeA">&times;</span>
-                <h1>Olá</h1>
-            </div>
-        </div>
+        
     </div>
 
     <script src="footer.js "></script>
