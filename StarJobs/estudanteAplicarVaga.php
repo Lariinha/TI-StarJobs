@@ -75,7 +75,7 @@
         <div style="margin: 0 30% 5% 32.5%;background-color: #dddddd;border-style: solid; border-radius: 15px;border-color: #000000;">
         
             <h3 style="color: #000000; text-align: center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">PREENCHA ABAIXO PARA FAZER SE APLICAR A VAGA</h3>
-    <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
             <label style="color: #000000;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 5%">Email:</label>
             <br>
             <input type="text" class="input-text" style="margin: 5px 3%;width: 90%;">

@@ -28,7 +28,7 @@ document.write(`
             <span class="close2">&times;</span>
             <a href="estudanteLogar.html" class="botao-azul" id="myBtn2"
                 style="font-size: 1.5em; margin-right: 10px;">ESTUDANTE</a>
-            <a href="empresaLogar.html" class="botao-amarelo" style="font-size: 1.5em;">EMPRESA</a>
+            <a href="empresaLogar.php" class="botao-amarelo" style="font-size: 1.5em;">EMPRESA</a>
             <a href="escolaLogar.html" class="botao-vermelho" style="font-size: 1.5em; margin-left: 10px;">FATEC</a>
         </div>
     </div>

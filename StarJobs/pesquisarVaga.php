@@ -67,7 +67,7 @@
 
                 while ($row = $result->fetch_assoc()) {
                     echo $row['Conteudo']."<br>";
-                }
+                }                
                 
                 ?>
                 </div>

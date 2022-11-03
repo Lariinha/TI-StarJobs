@@ -8,9 +8,20 @@
 
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
-    
+
 <body style="margin: 0">
+    
+    <style>
+        #container {
+            width: 80%;
+            margin: 20px;
+        }
+        .ck-editor__editable[role="textbox"] {
+            /* editing area */
+            min-height: 260px;
+        }
+      
+    </style>
 
     <script src="navbarEmp.js"></script>
 
@@ -59,19 +70,37 @@
             <br>
 
             <label style="color: #000000;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 4%">Sobre a Vaga:</label>
-            <textarea style="margin: 10px 0 0 4%;width: 90%;" rows="22"></textarea>
+            <form method="post" action="">
+            <div style="margin: 0% 5%;">
+            <textarea id="editor"></textarea>
+            </div>
 
             <br>
             <br>
             <br>
 
-            <a href="#" class="botao-amarelo" style="font-size: 1.5em; margin: 0 38%">CADASTRAR</a>
+            <button type="submit" class="botao-amarelo" style="font-size: 1.5em; margin: 0 38%">CADASTRAR</a>
+            </form>
 
 
 
         </div>
 
     </div>
+
+    <script src="ckeditor.js"></script>
+    <script>
+	    ClassicEditor
+		    .create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		    } )
+		    .then( editor => {
+			    window.editor = editor;
+		    } )
+		    .catch( err => {
+			    console.error( err.stack );
+		    } );
+    </script>
 
     <script src="footer.js"></script>
 
