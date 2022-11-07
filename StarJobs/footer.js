@@ -1,5 +1,5 @@
 document.write(`
-    <div class="letrakawai"  style="background-color: #222222; text-align: center;">
+    <div class="letrakawai"  style="background-color: #222222; text-align: center; padding-top: 1%;">
         <p style="color: #FFFFFF; font-size: large;">Star Jobs 2022 - Ester Carlos, Lara Rodrigues, José Ribeiro e Maisa Oliveira.</p>
         <p style="color: #FFFFFF; font-size: medium; font-style: italic;">"Seja a estrela do seu próprio sucesso."</p>
 

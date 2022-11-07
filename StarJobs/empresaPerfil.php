@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Jobs - Empresa Perfil</title>
+    <title>StarJobs - Empresa Perfil</title>
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -124,7 +124,7 @@ if(!isset($_SESSION["login"])){
     <div style="background-color: #999999;display: flex;height: adjust;padding: 1% 8% ">
 
             <div style="margin-right: 10px ; width: 100%;background-color: white; box-shadow: 1px 1px 4px #555555; border-radius: 25px; float: top; padding: 10px 20px; margin: 10px">
-                <div >
+                <div>
                 <table>
                     <thead>
                         <tr>
@@ -134,10 +134,14 @@ if(!isset($_SESSION["login"])){
                     </thead>
                     <?php  while ($row = $result->fetch_assoc()){ ?>
                         <tr>
+                            
                             <td> <?php custom_echo($row['Conteudo'], 200); ?></td>
-                            <td> <a class="botao-azul" href="ajustarPagina.php">Editar</a>  
+                            <td> <a class="botao-verde" href="vagaDetalhesEmpVisu.php?visu=<?php echo $row['ID_vaga']?>" >Visualizar</a>
+                                 <a class="botao-azul" href="ajustarPagina.php?editar=<?php echo $row['ID_vaga']; ?>">Editar</a>  
                                  <a class="botao-vermelho" href="processarDelete.php?delete=<?php echo $row['ID_vaga']; ?>">Deletar</a>
+                                 
                             </td>
+                            
                         </tr>
                         <?php  } ?>
                 </table>
@@ -151,7 +155,7 @@ if(!isset($_SESSION["login"])){
 
     <div style= "background-color: #999999;height: 80px;padding: 0 10%;">
     
-        <a href="empresaCadastroVaga.php" class="botao-outline-amarelo" id="myBtn2" style="font-size: 1.2em;">CADASTRAR VAGA</a>
+        <a href="empresaCadastroVaga.html" class="botao-outline-amarelo" id="myBtn2" style="font-size: 1.2em;">CADASTRAR VAGA</a>
     
     </div>
 

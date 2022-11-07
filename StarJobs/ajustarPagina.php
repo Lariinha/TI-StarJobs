@@ -1,18 +1,19 @@
 <?php
     include ("conexao.php");
 
-    session_start();
+   session_start();
+   
     
-    $idvaga = $_SESSION['idVaga'];
+    $idvaga = $_GET['editar'];
     
-
+    $_SESSION['idVaga'] = $idvaga;
 
 
     if($mysqli->connect_error){
         die("Connection failed ".$mysqli->connect_error);
     }
 
-
+ 
 
     $sql = "SELECT Conteudo from vagas where ID_vaga = '$idvaga' ";
 
@@ -69,7 +70,7 @@ echo
 
     <div style='height: 650px; margin: 5% 20% 10%; float: top;  box-shadow: 1px 1px 4px #555555; border-radius: 25px; padding: 10px 20px 30px; border: 1px solid gray;'> 
 
-        <form action='phpUpdateFormScript.php' method='post'>
+        <form action='processarEditVaga.php' method='post'>
 
 
 
@@ -85,7 +86,9 @@ echo
 
             <input class='botao-azul' type ='submit'>
         </form>
-        
+            
+                
+
         </div >
 
         <script src=\"ckeditor.js\"></script>
@@ -111,4 +114,5 @@ echo
 }
 $mysqli->close();
 
+    
 ?>

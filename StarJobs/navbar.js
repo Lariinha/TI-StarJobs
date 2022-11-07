@@ -26,10 +26,10 @@ document.write(`
     <div id="myModal2" class="modal2">
         <div class="modal-content2" style="text-align:center; padding-top: 40px;padding-bottom: 40px;">
             <span class="close2">&times;</span>
-            <a href="estudanteLogar.html" class="botao-azul" id="myBtn2"
+            <a href="estudanteLogar.php" class="botao-azul" id="myBtn2"
                 style="font-size: 1.5em; margin-right: 10px;">ESTUDANTE</a>
             <a href="empresaLogar.php" class="botao-amarelo" style="font-size: 1.5em;">EMPRESA</a>
-            <a href="escolaLogar.html" class="botao-vermelho" style="font-size: 1.5em; margin-left: 10px;">FATEC</a>
+            <a href="escolaLogar.php" class="botao-vermelho" style="font-size: 1.5em; margin-left: 10px;">FATEC</a>
         </div>
     </div>
 `);

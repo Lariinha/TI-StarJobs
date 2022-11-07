@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivagas - Empresa Logar</title>
+    <title>Trivagas - Estudante Logar</title>
 
     <link href="style.css" rel="stylesheet">
 
@@ -14,7 +14,7 @@
 
     <script src="navbar.js "></script>
 
-    <div  style="height: 100px;">
+    <div class="background-azul" style="height: 100px;">
 
         <br>
         <br>
@@ -23,14 +23,13 @@
 
     </div>
 
-    <div style="height: 500px;">
+    <div style="height: 490px;">
     
-        <div class="loginEmpresa">
+        <div class="loginEstudante" >
 
-            <h3 style="color: #000000; text-align: center;">PREENCHA ABAIXO PARA FAZER LOGIN NO SITE</h3>
-            
-            <form action="processoLoginEmpresa.php" method="POST">
-            <h4 style="color: #000000; text-align: center;">EMPRESA</h4>
+            <h3 style="color: #000000; text-align: center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">PREENCHA ABAIXO PARA FAZER LOGIN NO SITE</h3>
+            <form action="processoLoginEstudante.php" method="POST">
+            <h4 style="color: #000000; text-align: center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">ESTUDANTE</h4>
 
             <label style="color: #000000;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 10%;">Email:</label>
             
@@ -50,8 +49,9 @@
             <br>
             <br>
             <br>
+            <br>
             
-            <input name="enviar" type="submit" class="botao-verde" style="font-size: 1.5em;margin-left: 38%;" value="LOGAR">
+            <input name="enviar" href="estudanteInicial.php" class="botao-verde" type="submit" style="font-size: 1.5em;margin-left: 38%;" value="LOGAR">
             </form>
         </div>
 
@@ -59,7 +59,7 @@
 
     <?php
     if(isset($_REQUEST["err"]))
-	$msg="Usuário invalido ou senha";
+	$msg="Invalid username or Password";
     ?>
     <p style="color:red;">
     <?php if(isset($msg))

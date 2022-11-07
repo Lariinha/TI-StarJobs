@@ -6,7 +6,7 @@ document.write(`
         </a>
 
         <div style="float: right; height: 100%; padding: 40px 0;">
-            <a href="estudantePerfil.html" class="botao-azul" id="myBtn" style="font-size: 1.5em; margin-right: 10px;">PERFIL</a>
+            <a href="estudantePerfil.php" class="botao-azul" id="myBtn" style="font-size: 1.5em; margin-right: 10px;">PERFIL</a>
             <a href="index.html" class="botao-verde" id="myBtn" style="font-size: 1.5em;">SAIR</a>
         </div>
 
