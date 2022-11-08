@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Nov-2022 às 02:15
+-- Tempo de geração: 08-Nov-2022 às 02:02
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -81,6 +81,13 @@ CREATE TABLE `fatec` (
   `Login` varchar(12) DEFAULT NULL,
   `Senha` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `fatec`
+--
+
+INSERT INTO `fatec` (`Id_admin`, `Login`, `Senha`) VALUES
+(1, 'admin', '97005333');
 
 -- --------------------------------------------------------
 
@@ -185,7 +192,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de tabela `fatec`
 --
 ALTER TABLE `fatec`
-  MODIFY `Id_admin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `vagas`
