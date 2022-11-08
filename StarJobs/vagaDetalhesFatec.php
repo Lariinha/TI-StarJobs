@@ -13,14 +13,14 @@
 
 <body style="margin: 0;">
 
-    <script src="navbarEmp.js"></script>
+    <script src="navbarEsc.js"></script>
 
     <div style="height: 80px;border-top: #bbbbbb solid 1px;">
 
         <br>
         <br>
     
-        <a href="empresaPerfil.php" class="botao-azul" style="font-size: 1.5em; margin-left: 100px;">Voltar</a>
+        <a href="fatecPerfil.php" class="botao-azul" style="font-size: 1.5em; margin-left: 100px;">Voltar</a>
 
     </div>
                 
@@ -52,7 +52,7 @@
                 ?>
                 <br>
                 <br>
-                    <a class="botao-azul" href="ajustarPagina.php?editar=<?php echo $vaga; ?>">Editar</a>  
+                    <a class="botao-azul" href="ajustarPagina.php?editar=<?php echo $vaga; ?>">Aprovar</a>  
                     <a class="botao-vermelho" href="processarDelete.php?delete=<?php echo $vaga; ?>">Deletar</a>
 
                 
