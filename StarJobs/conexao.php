@@ -5,7 +5,7 @@ $db = "starjobs";
 $user = "root";
 $pass = "";
 
-$mysqli = new mysqli("localhost","root","","starjobs");
+$mysqli = new mysqli($host,$user,$pass,$db);
 
 // Check connection
 if ($mysqli -> connect_errno) {

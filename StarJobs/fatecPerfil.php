@@ -35,11 +35,13 @@
                 $sql = "SELECT * from vagas "; 
                 $result = $mysqli->query($sql);
 
-                $sql2 = $mysqli->query("SELECT Id_vaga from vagas");
+                $sql2 = $mysqli->query("SELECT ID_empresa from vagas");
                 $result2= mysqli_fetch_array($sql2);
 
+                $algo = $mysqli->query("SELECT * FROM empresa_cad")or die($mysqli->error());
+
                 
-                $_SESSION['idVaga'] = intval($result2[0]);
+                $_SESSION['empresa'] = intval($result2[0]);
 
 
                     function custom_echo($x, $length)
@@ -55,6 +57,8 @@
                         }
                     }
                 
+
+
                 ?>
 
             <div style="text-align: left; margin: 4%;margin-left: 5%; border: 1px hidden;border-radius: 2%;">            
@@ -70,8 +74,8 @@
                             
                             <td style="padding: 10px 10px 10px; width: 20%;height: 30%;border: 2px #D3D3D3;border-radius: 15px; border-style: outset;"> <?php custom_echo($row['Conteudo'], 200); echo '<br>'; ?>
                                  <a style="margin: 10px; float: left;" class="botao-verde" href="vagaDetalhesFatec.php?visu=<?php echo $row['ID_vaga']?>" >Visualizar</a>
-                                 <a style="margin: 10px; float: left;" class="botao-azul" href="ajustarPagina.php?editar=<?php echo $row['ID_vaga']; ?>">Aprovar</a>  
-                                 <a style="margin: 10px; float: left;" class="botao-vermelho" href="processarDelete.php?delete=<?php echo $row['ID_vaga']; ?>">Deletar</a>
+                                 <a style="margin: 10px; float: left;" class="botao-azul" href="processarAprov.php?aprov=<?php echo $row['ID_vaga']; ?>&empresa=<?php echo $row['ID_empresa']; ?>">Aprovar</a>  
+                                 <a style="margin: 10px; float: left;" class="botao-vermelho" href="processarDeleteFatec.php?delete=<?php echo $row['ID_vaga']; ?>">Deletar</a>
                                  
                             </td>
 
@@ -82,6 +86,36 @@
             
                 
             </div>
+        </div>
+
+            <h3 style="color: white;margin: 2% 0 0 40%;">Empresas Aguardando aprovação</h3>
+
+        <div style=" width: 60%;margin: 2% 0 0 20%;background-color: white;box-shadow: 1px 1px 4px #555555; border-radius: 25px;border-style: outset;border-color: #CCCDCC;">
+            <table style="margin: 0 0 4%;">
+                    <thead>
+                        <tr>
+                        <th>
+                        </th>
+                        </tr>
+                    </thead>
+                    <?php  while ($row = $algo->fetch_assoc()){ ?>
+                        <tr style="margin: 5%;">
+                            
+                            <td style="padding: 10px 10px 10px; width: 20%;height: 30%;border: 2px #D3D3D3;border-radius: 15px; border-style: outset;"> <?php echo "<br><div style='color: black; font-size: 20px ; ' > <b>Razão Social: </b>".$row['Razao_social']; echo '<br>'; echo "<b>CNPJ: </b>".$row['CNPJ'];
+                            echo '<br><b>Ramo de Atividade: </b>'.$row['Ramo_ativ'].'<br>'; echo '<b>Email: </b>'.$row['Email'].'<br>' ; echo '<br></div>'; ?>
+
+
+                                 <a style="margin: 10px; float: left;" class="botao-azul" href="processarAprovEmp.php?aprov=<?php echo $row['ID_empresa']; ?>">Aprovar</a>  
+                                 <a style="margin: 10px; float: left;" class="botao-vermelho" href="processarDeleteFatecEmp.php?delete=<?php echo $row['ID_empresa']; ?>">Deletar</a>
+                                 
+                            </td>
+
+                        </tr>
+                        <?php  } ?>
+                </table>
+        
+            
+
 
         </div>
 

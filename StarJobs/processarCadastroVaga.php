@@ -11,7 +11,7 @@
         if(!empty($conteudo && $id)){
 
         $mysqli->query("INSERT INTO `vagas`(`ID_empresa`,`Conteudo`) VALUES ('$id','$conteudo')") or die($mysqli->error);
-        echo "<alert> Cadastro realizado com sucesso!</alert>";
+        echo "<script> alert('Cadastro realizado com sucesso!')</script>";
         
         header("location:empresaPerfil.php");
 

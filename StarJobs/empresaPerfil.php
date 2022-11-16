@@ -96,10 +96,10 @@ if(!isset($_SESSION["login"])){
 
     <?php  
                 
-                $sql = "SELECT ID_vaga, Conteudo from vagas where ID_empresa = '$id'"; 
+                $sql = "SELECT ID_vaga, Conteudo from vaga_aprov where ID_empresa = '$id'"; 
                 $result = $mysqli->query($sql);
 
-                $sql2 = $mysqli->query("SELECT Id_vaga from vagas where ID_empresa = '$id'");
+                $sql2 = $mysqli->query("SELECT Id_vaga from vaga_aprov where ID_empresa = '$id'");
                 $result2= mysqli_fetch_array($sql2);
 
                 

@@ -38,7 +38,7 @@
                 $empresa =  mysqli_query($mysqli,$pesquisa);
 
 
-                $sql = "SELECT Conteudo from vagas where ID_vaga = '$vaga'"; 
+                $sql = "SELECT Conteudo from vaga_aprov where ID_vaga = '$vaga'"; 
                 $result = mysqli_query($mysqli,$sql);
                 
  

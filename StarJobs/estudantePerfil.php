@@ -26,7 +26,7 @@
         $id = $_SESSION["login"];
 
 
-        $perfil = $mysqli->query("SELECT * FROM ALUNO WHERE Id = '$id'");
+        $perfil = $mysqli->query("SELECT * FROM aluno WHERE Id = '$id'");
 
 
     
@@ -47,7 +47,7 @@
             <div style="float: left; padding-left: 10px; width: 75%;">
                 <div>
                     <p>Nome Completo</p>
-                    <input type="text" class="input-text" placeholder="<?php echo $row['Nome_completo']?>" style="width: 96%;">
+                    <input type="text" class="input-text" placeholder="<?php echo $row['Nome_completo']?>" style="width: 96%;" readonly>
                 </div>
 
                 <div style="float: left; padding-right: 10px;">
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <script src="footer.js "></script>
+    <script src="footer.js"></script>
 
 </body>
 
